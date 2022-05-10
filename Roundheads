@@ -1,0 +1,24 @@
+//
+//  ViewController.swift
+//  Roundheads
+//
+//  Created by Joel Walker on 5/9/22.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+    @IBOutlet weak var Headview: UIImageView!
+    @IBOutlet weak var Skins: UIPickerView!
+    
+    @IBOutlet weak var Hair: UIImageView!
+    @IBOutlet weak var Eyebrow: UIImageView!
+}
+
