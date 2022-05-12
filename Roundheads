@@ -1,24 +1,64 @@
 //
 //  ViewController.swift
-//  Roundheads
+//  Circleheads
 //
-//  Created by Joel Walker on 5/9/22.
+//  Created by Joel Walker on 5/10/22.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    struct Creations: Equatable {
+        let id = UIImageView
+        let Exit = UIButton
     }
-
-
-    @IBOutlet weak var Headview: UIImageView!
-    @IBOutlet weak var Skins: UIPickerView!
-    
-    @IBOutlet weak var Hair: UIImageView!
-    @IBOutlet weak var Eyebrow: UIImageView!
+                            
+    @IBOutlet weak var Skin1: UIImageView!
+    @IBOutlet weak var Skin2: UIImageView!
+    @IBOutlet weak var Eyebrow1: UIImageView!
+    @IBOutlet weak var Eyebrow2: UIImageView!
+    @IBOutlet weak var Hair1: UIImageView!
+    @IBOutlet weak var Hair2: UISwitch!
+    var SkinSwitchOn = true
+    @IBOutlet weak fileprivate func updateUI() {
+        if SkinSwitchOn {
+            UIImageView = Skin1
+        } else {
+            UIImageView = Skin2
+        }
+    }
+    var SkinSwitch: UISwitch! {
+        SkinSwitchOn.toggle()
+        updateUI()
+        @IBOutlet weak var Download: UIBarButtonItem! {
+            UIImageWriteToSavedPhotosAlbum(UIImage, <Any> , Selector, UnsafeMutablePointer)
+        }
+        var EyebrowSwitchOn = true
+        @IBOutlet weak fileprivate func updateUI() {
+            if EyebrowSwitchOn {
+                UIImageView = Eyebrow1
+            } else {
+                UIImageView = Eyebrow2
+            }
+        }
+        var EyebrowSwitch: UISwitch! {
+            EyebrowSwitchOn.toggle()
+            updateUI()
+            
+            var HairSwitchOn = true
+            @IBOutlet weak fileprivate func updateUI() {
+                if HairSwitchOn {
+                    UIImageView = Hair1
+                } else {
+                    UIImageView = Hair2
+                }
+            }
+            var HairSwitch: UISwitch! {
+                HairSwitchOn.toggle()
+                updateUI()
+        
+        @IBOutlet weak var PastCreationsViewController: UIBarButtonItem!{
+            UITableView
+        }
+    }
 }
-
